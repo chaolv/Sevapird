@@ -13,6 +13,9 @@
         ">
         
     <context:component-scan base-package="dev.chao.sevapird.controller"/>
+    <mvc:anotation-driven/>
+    
+<!--     <mvc:resources location="/,classpath:/META-INF/publicResources/" mapping="/resources/**"/> -->
     
 <!--     <bean id="viewResolver" -->
 <!--         class="org.springframework.web.servlet.view.InternalResourceViewResolver"> -->
