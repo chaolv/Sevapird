@@ -7,7 +7,7 @@
     <!-- 声明spring上下文配置文件所在位置，可以使用通配符*等进行模糊匹配，当有多个配置文件时，可以使用逗号间隔 -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:applicationContext.xml,classpath:servletContext.xml</param-value>
+        <param-value>classpath:config/applicationContext.xml,classpath:config/servletContext.xml</param-value>
     </context-param>
     <!-- 审批ringmvc的核心分发器，它会默认自动加载WEB-INF文件夹下的<servlet-names>-servlet.xml文件，在这里，我们的servlet-nane为springMVC -->
     <servlet>
@@ -16,7 +16,7 @@
         <!-- 如果我们的配置文件不在默认路径下，我们需要通过<init-param>配置一个contextConfigLocation指定springMVC分发器配置文件位置 -->
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>classpath:servleContext.xml</param-value>
+            <param-value>classpath:config/servletContext.xml</param-value>
         </init-param>
         <!-- 设置当前servlet在所有servlet中第一个启动 -->
         <load-on-startup>1</load-on-startup>
@@ -24,7 +24,7 @@
 	<!--  配置springMVC控制器的拦截url,默认所有url都被拦截-->
     <servlet-mapping>
         <servlet-name>springMVC</servlet-name>
-        <url-pattern>/Sevapird</url-pattern>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
     <!-- 配置上下文载入监听器，它会在web服务启动时，根据contextConfigLocation中声明的spring配置文件位置载入配置信息 
               需要注意的是，它不会载入DispatcherServlet已经载入的配置文件 -->

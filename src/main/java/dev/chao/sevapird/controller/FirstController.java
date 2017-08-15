@@ -7,12 +7,12 @@ import lombok.extern.log4j.Log4j2;
 
 @Controller
 @Log4j2
-@RequestMapping("/hello")
 public class FirstController {
 	
 	@RequestMapping("/hello")
 	public String sayHello() {
-		return "Hello";
+		log.info("Enter FirstController");
+		return "hello";
 	}
 	
 }
